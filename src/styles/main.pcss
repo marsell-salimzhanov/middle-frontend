@@ -1,0 +1,125 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2c3e50;
+  --text-color: #1E1E1E;
+  --error-color: #e74c3c;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: white;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: color-mix(in srgb, var(--primary-color) 80%, black);
+  }
+
+  &:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+  }
+}
+
+.input {
+ 
+  width: 100%;
+  color: #999999;
+  font-size: 13px;
+  outline: none;
+
+  &__element {
+    width: 100%;
+    padding: 7px 0;
+    border: 0;
+    border-bottom: 1px solid #3369F3;
+
+    &:active,
+    &:hover,
+    &:focus {
+      outline: 0;
+      outline-offset: 0;
+    }
+  }
+
+  &__label {
+    visibility: hidden;
+  }
+}
+
+.input__element {
+    width: 100%;
+    padding: 7px 0;
+    border: 0;
+    border-bottom: 1px solid #3369F3;
+}
+
+
+.error {
+  color: var(--error-color);
+  font-weight: bold;
+}
+
+.question {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--secondary-color);
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.navigate-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-self: flex-start;
+  align-self: flex-start;
+  width: 100%;
+  padding: 20px;
+}
+
+.login-form {
+  display: flex;
+  height: 450px;
+  width: 340px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 6px 0px #00000024;
+  flex-direction: column;
+  padding: 0 30px;
+}
